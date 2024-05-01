@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-flask-service
+  labels:
+    {{- include "svc-labels" . | indent 2 }}
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    {{- include "depl-labels" . | indent 2 }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+      nodePort: {{ .Values.service.nodePort }}

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-flask-deployment
+  labels:
+    {{- include "depl-labels" . | indent 2 }}
+spec:
+  replicas: {{ .Values.deployment.replicas }}
+  selector:
+    matchLabels:
+      {{- include "depl-labels" . | indent 4 }}
+  template:
+    metadata:
+      labels:
+        {{- include "depl-labels" . | indent 6 }}
+    spec:
+      containers:
+      - name: {{ .Values.deployment.container.name }}
+        image: {{ .Values.deployment.image.owner }}/{{ .Values.deployment.image.repository }}:{{ .Values.deployment.image.tag }}
+        ports:
+        - containerPort: {{ .Values.deployment.container.port }}
