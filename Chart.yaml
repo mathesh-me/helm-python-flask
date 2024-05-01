@@ -1,0 +1,16 @@
+apiVersion: v2
+name: pythonflaskapp
+version: 0.0.1
+description: A Simple Helm Chart for Python Flask Application
+type: application
+keywords:
+  - python
+  - flask
+# sources:
+#   - https://github.com/mathesh-me/helm-python-flask-app
+maintainers:
+  - name: Mathesh M
+    email: itzmathesh@gmail.com
+    url: 
+icon: https://helm.sh/img/helm.svg
+appVersion: 0.0.1
