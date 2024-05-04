@@ -71,6 +71,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Author
 
 - [Mathesh M](https://www.linkedin.com/in/mathesh-me/) on LinkedIn.
-**Email:** itzmathesh@gmail.com
+- **Email:** itzmathesh@gmail.com
 
 **Contributions are always welcome! You can contribute to this Chart by creating a Pull Request.**
